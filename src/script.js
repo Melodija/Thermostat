@@ -3,8 +3,8 @@ var thermostat = new Thermostat();
 $(document).ready(function() {
 
   displayTemp();
-  PSMStatus();
   updateColour();
+  PSMStatus();
 
   $('#temp-up').click(function(){
     thermostat.increaseTemp();
@@ -21,6 +21,7 @@ $(document).ready(function() {
   $('#temp-reset').click(function() {
     thermostat.reset();
     displayTemp();
+    updateColour();
   });
 
   $('#psm-toggle').click(function() {
