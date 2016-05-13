@@ -11,16 +11,26 @@
     <h1>Thermo-5000</h1>
 
     <div id="display-panel">
-      <h2></h2>
+      <h2 id="temperature"></h2>
 
-      <p></p>
+      <p id="psm-display"></p>
+
+      <p id="weather"></p>
     </div>
 
-    <div id='control-panel'>
-      <input type='button' id='temp-up' value='Temp Up'/>
-      <input type='button' id='temp-down' value='Temp Down'/>
-      <input type='button' id='temp-reset' value='Reset Temp'/>
-      <input type='button' id='psm-toggle' value='Toggle PSM'/>
+    <div id="control-panel">
+      <input type="button" id="temp-up" value="Temp Up" />
+      <input type="button" id="temp-down" value="Temp Down" />
+      <input type="button" id="temp-reset" value="Reset Temp" />
+      <input type="button" id="psm-toggle" value="Toggle PSM" />
+      <label for="current-city">Current City:</label>
+      <select id="current-city">
+        <option value="London">London</option>
+        <option value="Manchester">Manchester</option>
+        <option value="Birmingham">Birmingham</option>
+        <option value="Newcastle">Newcastle</option>
+      </select>
+      <input type="button" id="current-city-btn" value="Submit" />
     </div>
 
   </body>

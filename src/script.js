@@ -29,14 +29,21 @@ $(document).ready(function() {
     PSMStatus();
   });
 
+
+  $("#current-city-btn").click(function() {
+    var city = $('#current-city').val()
+    $.get('http://api.wunderground.com/api/f26c2b4e79b8e1fc/conditions/q/UK/'+city+'.json', function(data) {
+      $('#weather').text(data.current_observation.temp_c);
+    });
+  });
 });
 
 var displayTemp = function() {
-  $('h2').text(thermostat.temperature());
+  $('#temperature').text(thermostat.temperature());
 };
 
 var PSMStatus = function() {
-  $('p').text(function() {
+  $('#psm-display').text(function() {
     if(thermostat.isPSMOn()) {
       return "Power Saving Mode: On";
     }
