@@ -33,13 +33,13 @@ $(document).ready(function() {
   $("#current-city-btn").click(function() {
     var city = $('#current-city').val()
     $.get('http://api.wunderground.com/api/f26c2b4e79b8e1fc/conditions/q/UK/'+city+'.json', function(data) {
-      $('#weather').text(data.current_observation.temp_c + '');
+      $('#weather').html(data.current_observation.temp_c + '&deg;c');
     });
   });
 });
 
 var displayTemp = function() {
-  $('#temperature').text(thermostat.temperature() + '');
+  $('#temperature').html(thermostat.temperature() + '&deg;c');
 };
 
 var PSMStatus = function() {
